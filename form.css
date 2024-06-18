@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace; /* 设置全局字体样式 */
+    font-size: 16px; /* 统一设置全局字体大小 */
+}
+/* 引入自定义字体 */
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('./font/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.form {
+    position: relative;
+    height: 100vh; /* 使背景图覆盖整个页面高度 */
+    display: flex;/* 使用 Flex 布局 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 20px; /* 距离顶部一定距离 */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* 水平居中 */
+    z-index: 1; /* 确保页眉在背景图上方 */
+    text-align: center;
+}
+
+.logo-text {
+    font-family: 'Great Vibes', cursive; /* 使用自定义手写字体 */
+    font-weight: normal;
+    font-size: 48px; /* 调整字体大小以突出显示 */
+    color: #f69235; /* 字体颜色 */
+    transform: rotate(-2deg); /* 轻微旋转以增加飘逸感 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    letter-spacing: 2px; /* 增加字母间距 */
+    border-radius: 5px;
+}
+.bgc {
+    width: 100%;
+}
+
+.submit {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 150px;
+    width: 500px;
+    height: 550px; /* 调整高度以适应内容 */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;/* 使用 Flex 布局 */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* 添加 padding 以防止元素超出边界 */
+    box-sizing: border-box;
+}
+
+.form_title {
+    text-align: center;
+    margin-top: 20px; /* 减少顶部边距以调整位置 */
+    font-size: 18px;
+}
+
+.form_table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0 15px; /* 表格行之间的间距 */
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.form_table td {
+    padding: 5px 10px;
+    vertical-align: middle; /* 确保单元格内容垂直居中 */
+}
+
+.label {
+    text-align: right; /* 右对齐标签文本 */
+    padding-right: 10px; /* 增加标签和输入框之间的间距 */
+}
+
+.inputs {
+    height: 40px;
+    width: 100%; /* 使输入框的宽度自适应表格宽度 */
+    border-radius: 5px;
+    border: none;
+    background-color: #eee;
+    color: #666;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+textarea.inputs {
+    height: 120px; /* 调整留言文本框的高度 */
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box; /* 确保 padding 不会使输入框超出边界 */
+}
+
+#message {
+    margin-top: 5px;
+    color: #666; /* 设置留言内容字体颜色 */
+    font-family: 'Courier New', Courier, monospace; /* 设置全局字体样式 */
+    font-size: 16px; /* 统一设置全局字体大小 */
+}
+
+.btn_submit {
+    margin-top: 60px; /* 增加按钮与表格之间的间距 */
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: center;
+    gap: 30px; /* 使用 gap 增加按钮之间的间距 */
+}
+
+.btn {
+    border: none;
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    background: #999;
+}
+
+.btn:hover {
+    background: #666;
+}
+
+.home_href {
+    border: none;
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    background: #FFD204;
+}
+
+/* 公共样式的footer */
+ 
+.footer_con {
+    height: 82px;
+    /* background: #cccccc; */
+}
+ 
+.footer_con .footer_l {
+    height: 58px;
+    float: left;
+    /* background: red; */
+    padding-top: 24px;
+}
+ 
+.footer_con .footer_l a {
+    font-size: 12px;
+    float: left;
+    color: #868686;
+    border-right: 1px solid #868686;
+    /* padding:字体和边框的距离哈 */
+    padding: 0 7px;
+    padding-left: 15px;
+}
+ 
+.footer_con .footer_l .footer-right {
+    border-right: none!important;
+}
+ 
+.footer_con .footer_r {
+    height: 57px;
+    color: #8a8a8a;
+    font-size: 12px;
+    padding-top: 25px;
+    /* background: pink; */
+    padding-right: 21px;
+    float: right;
+}

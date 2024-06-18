@@ -1,0 +1,288 @@
+/* 这个文件里面放4个页面公共的一些样式，比如背景、导航栏等 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    perspective: 340px;
+    width: 100%;
+    position: relative;
+}
+
+/* 导航栏 */
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(50, 50, 50, 0.2);
+    color: #fff;
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: start;
+    align-items: center;
+}
+
+/* 导航栏中的 log */
+.nav img {
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+/* 导航栏中的标题 */
+.nav .title {
+    width: 120px;
+}
+
+/* 导航栏中的占位符 */
+.nav .spacer {
+    height: 40px;
+    width: calc(100% - 370px);
+}
+
+/* 导航栏中的链接 */
+.nav a {
+    width: 60px;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* 版心的样式 */
+.container {
+    height: calc(100% - 50px);
+    width: 1000px;
+    margin: 0 auto;
+    /* 为了让版心里面的子元素能够以左右布局的方式显示，使用 flex 布局 */
+    display: flex;/* 使用 Flex 布局 */
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 左侧区域样式 */
+.container .container-left {
+    height: 100%;
+    width: 200px;
+}
+
+/* 右侧区域样式 */
+.container .container-right {
+    height: 100%;
+    width: 795px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+/* 用户信息卡片，也会在多个页面中用到 */
+.card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* 用户头像 */
+.card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+/* 用户名 */
+.card h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 其它信息 */
+.card a {
+    /* a 标签是行内元素，设置尺寸、边距都可能失效，要转成块级元素 */
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: grey;
+    padding: 3px;
+}
+
+.card .counter {
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: space-around;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+/* 这个 CSS 文件是用来放博客详情页的专属样式 */
+
+/* 博客详情页样式 */
+.blog-content {
+    padding: 30px;
+    display: flex;/* 使用 Flex 布局 */
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.blog-card .date {
+    text-align: center;
+    padding-bottom: 10px;
+    color: grey;
+}
+
+.blog-card p {
+    text-indent: 2em;
+    padding: 10px 0;
+}
+.blog-card a {
+    color: black; /* 设置链接文本颜色为黑色 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.blog-card a:hover {
+    color: rgb(212, 29, 44); /* 设置链接文本在鼠标悬停时的颜色为蓝色，您可以根据需要修改为其他颜色 */
+}
+
+.title {
+    position: absolute;
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 300px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.titles {
+    position: absolute;
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 350px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}.title {
+    position: absolute;
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 300px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.titles {
+    position: absolute;
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 350px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    margin: auto;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;/* 使用 Flex 布局 */
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}

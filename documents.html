@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情页</title>
+    <link rel="stylesheet" href="documents.css">
+</head>
+<body>
+    <div class="home">
+        <div class="content">
+            <h3 class="title">欢迎来到我的技术博客页面</h3>
+            <h3 class="titles">以下都是个人原创哦~~</h3>
+            <div class="stars"></div>
+            <img class="bgc" src="./img/bgdocument.jpg" width="100%"lt="">
+            <img class="icon" src="./img/down.png" alt="">
+            <div class='ribbon'>
+                <a href='./index.html'><span>Home</span></a>
+                <a href='./about.html'><span>About</span></a>
+                <a href='./documents.html'><span>Documents</span></a>
+                <a href='./form.html'><span>Contents</span></a>
+
+            </div>
+
+        </div>
+    <!-- 版心 -->
+    <div class="container">
+        <!-- 左侧区域，显示用户信息 -->
+        <div class="container-left">
+            <!-- 用户详情 -->
+            <div class="card">
+                <!-- 用户的头像 -->
+                <img src="img/head.jpg" alt="">
+                <!-- 用户名 -->
+                <h3>BoJing</h3>
+                <!-- 其它信息 -->
+                <a href="https://blog.csdn.net/BoJing6?type=blog">CSDN 地址</a>
+                <a href="#">GitHub 地址</a>
+                <!-- 文章分类 -->
+                <div class="counter">
+                    <span>文章</span>
+                    <span>分类</span>
+                </div>
+                <div class="counter">
+                    <span>4</span>
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧区域，显示博客列表 -->
+        <div class="container-right">
+            <!-- 使用这个 div 来放博客内容 -->
+            <div class="blog-content">
+                <!-- 博客内容卡片 -->
+                <div class="blog-card">
+                    <a href="https://blog.csdn.net/BoJing6/article/details/137644263?spm=1001.2014.3001.5502"><h3>[HITCON 2017]SSRFme代码审计</h3></a>
+                    <div class="date">2024-4-11</div>
+                    <div class="detail">
+                        认认真真做了一次代码审计的题目，感觉收获很大，决定记录下来。一打开题目就是源代码，首先isset() 是 PHP 中的一个函数，用于检查变量是否已经被设置并且不是 null。它接受一个或多个参数，并返回一个布尔值，指示每个参数是否被设置然后使用mkdir()创建了这样的一个沙盒路...</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <a href="https://blog.csdn.net/BoJing6/article/details/137148908?spm=1001.2014.3001.5502"><h3>[GXYCTF2019]禁止套娃1(无参RCE)</h3></a>
+                    <div class="date">2024-3-31</div>
+                    <div class="detail">
+                        scandir() :将返回当前目录中的所有文件和目录的列表。返回的结果是一个数组，其中包含当前目录下的所有文件和目录名称（glob()可替换）
+                        localeconv() ：返回一包含本地数字及货币格式信息的二维数组。（但是这里数组第一项就是‘.’，这个.的用处很大）
+                        current() ：返回数组中的单...
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <a href="https://blog.csdn.net/BoJing6/article/details/136767876?spm=1001.2014.3001.5502"><h3>php序列化和反序列化</h3></a>
+                    <div class="date">2024-3-11</div>
+                    <div class="detail">
+                        三个魔术方法：PHP中把以两个下划线__开头的方法称为魔术方法(Magic methods)，这些方法在PHP中充当了举足轻重的作用.（1） __construct()函数 类的构造函数，创建时自动调用，用得到的参数覆盖$file。php中构造方法是对象创建完成后被对象自动调用的方法，在每个类中都有一...
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <a href="https://blog.csdn.net/BoJing6/article/details/137050284?spm=1001.2014.3001.5502"><h3>[RoarCTF 2019]Easy Java                    </h3></a>
+                    <div class="date">2024-2-26</div>
+                    <div class="detail">
+                        一点进来还以为是sql注入，后来才知道是我太年轻了，后来看了大佬文章ctf/web源码泄露及利用办法【总结中】_web游戏泄露源码信息找回解题思路-CSDN博客这也给我扫清了困惑，为啥后面源码在classes文件里面，这里用post访问WEB-INF/web.xml文件目录，不过为啥用post我不太...
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+</body>
+</html>

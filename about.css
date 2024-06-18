@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.about_bgc {
+    width: 100%
+}
+
+.about_tit {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    right: 0;
+    font-size: 28px;
+    font-weight: 550;
+    bottom: 0;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    margin: auto;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;/* 使用 Flex 布局 */
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.me {
+    display: flex;/* 使用 Flex 布局 */
+    justify-content: center;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.me_tit {
+    width: 600px;
+    line-height: 1.8;
+    font-size: 18px;
+    margin-left: 20px;
+    animation: fade-in 1.5s ease-out forwards;
+}
+
+.me_img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.me_img:hover {
+    transform: scale(1.1);
+}
+
+
+.videos {
+    display: flex;/* 使用 Flex 布局 */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.videos span {
+    flex: 0 0 60%; 
+    margin: 0 20px;
+    text-align: center;
+    color: #111110;
+    font-size: 18px;
+    animation: slide-in-right 1s ease-out forwards;
+}
+
+.videos video {
+    width: 400px;
+    margin: 0 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.videos video:hover {
+    transform: scale(1.1);
+}
+
+.videos1 {
+    display: flex;/* 使用 Flex 布局 */
+    align-items: center;
+    margin-top: 40px;
+}
+
+.videos1 video {
+    width: 600px;
+    margin: 0 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.videos1 video:hover {
+    transform: scale(1.1);
+}
+
+.videos1 span {
+    flex: 1;
+    font-size: 18px;
+    animation: slide-in-left 1s ease-out forwards;
+}
+
+/* 各个块状结构的样式 */
+.block {
+    position: relative;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) rotateY(0deg);
+    overflow: hidden;
+}
+
+.block::before,
+.block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.block::before {
+    left: 0;
+}
+
+.block::after {
+    right: 0;
+}
+
+.block:hover::before {
+    transform: perspective(1000px) rotateY(-10deg);
+}
+
+.block:hover::after {
+    transform: perspective(1000px) rotateY(10deg);
+}
+
+.block:hover::before,
+.block:hover::after {
+    pointer-events: none;
+}
+
+.block:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 动画效果 */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
